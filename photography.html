@@ -2,63 +2,291 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Photography - [Your Name]</title>
-    <!-- Link to CSS -->
-    <link rel="stylesheet" href="css/styles.css" />
-    <!-- Optional: Link to a CSS framework or gallery library -->
+    <title>My Photography Collection</title>
+    <link href="css/styles.css" rel="stylesheet" />
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
     />
   </head>
   <body>
-    <header>
-      <h1>Photography</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="about.html">About Me</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container px-5">
+        <a class="navbar-brand" href="index.html">My Portfolio</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="overlap-header bg-dark py-5">
+      <div class="container px-5">
+        <h1 class="display-4 fw-bolder text-white text-center">
+          My Collection
+        </h1>
+      </div>
     </header>
 
-    <main>
-      <section id="gallery">
-        <h2>My Photo Gallery</h2>
-        <div class="photo-grid">
-          <!-- Example of a photo item -->
-          <a
-            href="images/photo1_large.jpg"
-            data-lightbox="portfolio"
-            data-title="Photo Description"
-          >
-            <img src="images/photo1_thumb.jpg" alt="Photo 1" />
-          </a>
+    <div class="col-lg-3 col-md-4 col-sm-12 fixed-left-section">
+      <div class="personal-statement">
+        <h2>About Me</h2>
+        <p>
+          Welcome to my photography collection. Each image here tells a story, a
+          moment captured in time. Explore and enjoy my perspective through the
+          lens.
+        </p>
+      </div>
+    </div>
 
-          <a
-            href="images/photo2_large.jpg"
-            data-lightbox="portfolio"
-            data-title="Photo Description"
-          >
-            <img src="images/photo2_thumb.jpg" alt="Photo 2" />
-          </a>
+    <!-- Photography Collection Section -->
+    <section id="photography" class="py-5">
+      <div class="col-lg-9 col-md-8 col-sm-12 offset-lg-3">
+        <section id="photo-gallery" class="py-5">
+          <div class="container">
+            <div class="row gx-4 gy-4">
+          <!-- Example Image Card -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <img
+              src="images/A.jpg"
+              class="uniform-img"
+              alt="Artwork A"
+              onclick="openModal('images/A.jpg')"
+            />
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <img
+              src="images/B.jpg"
+              class="uniform-img"
+              alt="Artwork B"
+              onclick="openModal('images/B.jpg')"
+            />
+          </div>
 
-          <!-- Add more photos as needed -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <img
+              src="images/C.jpg"
+              class="uniform-img"
+              alt="Artwork C"
+              onclick="openModal('images/C.jpg')"
+            />
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <img
+              src="images/D.jpg"
+              class="uniform-img"
+              alt="Artwork D"
+              onclick="openModal('images/D.jpg')"
+            />
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <img
+              src="images/A1.jpg"
+              class="uniform-img"
+              alt="Artwork A1"
+              onclick="openModal('images/A1.jpg')"
+            />
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <img
+              src="images/A2.jpg"
+              class="uniform-img"
+              alt="Artwork A2"
+              onclick="openModal('images/A2.jpg')"
+            />
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <img
+              src="images/A3.jpg"
+              class="uniform-img"
+              alt="Artwork A3"
+              onclick="openModal('images/A3.jpg')"
+            />
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <img
+              src="images/A4.jpg"
+              class="uniform-img"
+              alt="Artwork A4"
+              onclick="openModal('images/A4.jpg')"
+            />
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <img
+              src="images/B1.jpg"
+              class="uniform-img"
+              alt="Artwork B1"
+              onclick="openModal('images/B1.jpg')"
+            />
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <img
+              src="images/B2.jpg"
+              class="uniform-img"
+              alt="Artwork B2"
+              onclick="openModal('images/B2.jpg')"
+            />
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <img
+              src="images/B3.jpg"
+              class="uniform-img"
+              alt="Artwork B3"
+              onclick="openModal('images/B3.jpg')"
+            />
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <img
+              src="images/B4.jpg"
+              class="uniform-img"
+              alt="Artwork B4"
+              onclick="openModal('images/B4.jpg')"
+            />
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <img
+              src="images/C1.jpeg"
+              class="uniform-img"
+              alt="Artwork C1"
+              onclick="openModal('images/C1.jpeg')"
+            />
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <img
+              src="images/C2.jpeg"
+              class="uniform-img"
+              alt="Artwork C2"
+              onclick="openModal('images/C2.jpeg')"
+            />
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <img
+              src="images/C3.jpeg"
+              class="uniform-img"
+              alt="Artwork C3"
+              onclick="openModal('images/C3.jpeg')"
+            />
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <img
+              src="images/C4.jpeg"
+              class="uniform-img"
+              alt="Artwork C4"
+              onclick="openModal('images/C4.jpeg')"
+            />
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <img
+              src="images/D1.jpeg"
+              class="uniform-img"
+              alt="Artwork D1"
+              onclick="openModal('images/D1.jpeg')"
+            />
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <img
+              src="images/D2.jpeg"
+              class="uniform-img"
+              alt="Artwork D2"
+              onclick="openModal('images/D2.jpeg')"
+            />
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <img
+              src="images/D3.jpeg"
+              class="uniform-img"
+              alt="Artwork D3"
+              onclick="openModal('images/D3.jpeg')"
+            />
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <img
+              src="images/D4.jpeg"
+              class="uniform-img"
+              alt="Artwork D4"
+              onclick="openModal('images/D4.jpeg')"
+            />
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <img
+              src="images/I.jpeg"
+              class="uniform-img"
+              alt="Artwork I"
+              onclick="openModal('images/I.jpeg')"
+            />
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <img
+              src="images/II.jpg"
+              class="uniform-img"
+              alt="Artwork II"
+              onclick="openModal('images/II.jpg')"
+            />
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <img
+              src="images/III.jpeg"
+              class="uniform-img"
+              alt="Artwork III"
+              onclick="openModal('images/III.jpeg')"
+            />
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <img
+              src="images/IV.jpg"
+              class="uniform-img"
+              alt="Artwork IV"
+              onclick="openModal('images/IV.jpg')"
+            />
+          </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <footer>
-      <p>&copy; 2024 [Your Name]. All rights reserved.</p>
-    </footer>
+    <!-- Image Modal -->
+    <div class="modal" id="imageModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <img id="modalImage" class="img-fluid" />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <!-- Link to JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
-    <!-- Optional: Include Lightbox JS library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
   </body>
 </html>

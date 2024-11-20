@@ -2,3 +2,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Welcome to My Portfolio!");
 });
+
+function openModal(imageSrc) {
+  const modal = new bootstrap.Modal(document.getElementById("imageModal"));
+  document.getElementById("modalImage").src = imageSrc;
+  modal.show();
+}
