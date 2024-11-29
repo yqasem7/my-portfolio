@@ -3,18 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Photography Collection</title>
-    <link href="css/styles.css" rel="stylesheet" />
+    <title>Yesin's portfolio</title>
+
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <!-- Your Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container px-5">
-        <a class="navbar-brand" href="index.html">My Portfolio</a>
+        <!-- About Bar Toggle Button -->
+        <button
+          class="about-bar-toggler me-2"
+          type="button"
+          id="aboutBarToggle"
+          aria-label="Toggle About Bar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand" href="index.html">Yesin Qasem</a>
+
+        <!-- Navbar Collapse Button -->
         <button
           class="navbar-toggler"
           type="button"
@@ -26,8 +41,11 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
+        <!-- Navbar Links -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
+            <!-- Navigation Items -->
             <li class="nav-item">
               <a class="nav-link" href="index.html">Home</a>
             </li>
@@ -36,6 +54,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="resume.html">Resume</a>
             </li>
           </ul>
         </div>
@@ -51,220 +72,225 @@
       </div>
     </header>
 
-    <div class="col-lg-3 col-md-4 col-sm-12 fixed-left-section">
-      <div class="personal-statement">
-        <h2>About Me</h2>
-        <p>
-          Welcome to my photography collection. Each image here tells a story, a
-          moment captured in time. Explore and enjoy my perspective through the
-          lens.
-        </p>
-      </div>
-    </div>
-
-    <!-- Photography Collection Section -->
-    <section id="photography" class="py-5">
-      <div class="col-lg-9 col-md-8 col-sm-12 offset-lg-3">
-        <section id="photo-gallery" class="py-5">
-          <div class="container">
-            <div class="row gx-4 gy-4">
-          <!-- Example Image Card -->
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <img
-              src="images/A.jpg"
-              class="uniform-img"
-              alt="Artwork A"
-              onclick="openModal('images/A.jpg')"
-            />
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <img
-              src="images/B.jpg"
-              class="uniform-img"
-              alt="Artwork B"
-              onclick="openModal('images/B.jpg')"
-            />
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <img
-              src="images/C.jpg"
-              class="uniform-img"
-              alt="Artwork C"
-              onclick="openModal('images/C.jpg')"
-            />
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <img
-              src="images/D.jpg"
-              class="uniform-img"
-              alt="Artwork D"
-              onclick="openModal('images/D.jpg')"
-            />
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <img
-              src="images/A1.jpg"
-              class="uniform-img"
-              alt="Artwork A1"
-              onclick="openModal('images/A1.jpg')"
-            />
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <img
-              src="images/A2.jpg"
-              class="uniform-img"
-              alt="Artwork A2"
-              onclick="openModal('images/A2.jpg')"
-            />
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <img
-              src="images/A3.jpg"
-              class="uniform-img"
-              alt="Artwork A3"
-              onclick="openModal('images/A3.jpg')"
-            />
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <img
-              src="images/A4.jpg"
-              class="uniform-img"
-              alt="Artwork A4"
-              onclick="openModal('images/A4.jpg')"
-            />
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <img
-              src="images/B1.jpg"
-              class="uniform-img"
-              alt="Artwork B1"
-              onclick="openModal('images/B1.jpg')"
-            />
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <img
-              src="images/B2.jpg"
-              class="uniform-img"
-              alt="Artwork B2"
-              onclick="openModal('images/B2.jpg')"
-            />
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <img
-              src="images/B3.jpg"
-              class="uniform-img"
-              alt="Artwork B3"
-              onclick="openModal('images/B3.jpg')"
-            />
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <img
-              src="images/B4.jpg"
-              class="uniform-img"
-              alt="Artwork B4"
-              onclick="openModal('images/B4.jpg')"
-            />
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <img
-              src="images/C1.jpeg"
-              class="uniform-img"
-              alt="Artwork C1"
-              onclick="openModal('images/C1.jpeg')"
-            />
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <img
-              src="images/C2.jpeg"
-              class="uniform-img"
-              alt="Artwork C2"
-              onclick="openModal('images/C2.jpeg')"
-            />
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <img
-              src="images/C3.jpeg"
-              class="uniform-img"
-              alt="Artwork C3"
-              onclick="openModal('images/C3.jpeg')"
-            />
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <img
-              src="images/C4.jpeg"
-              class="uniform-img"
-              alt="Artwork C4"
-              onclick="openModal('images/C4.jpeg')"
-            />
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <img
-              src="images/D1.jpeg"
-              class="uniform-img"
-              alt="Artwork D1"
-              onclick="openModal('images/D1.jpeg')"
-            />
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <img
-              src="images/D2.jpeg"
-              class="uniform-img"
-              alt="Artwork D2"
-              onclick="openModal('images/D2.jpeg')"
-            />
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <img
-              src="images/D3.jpeg"
-              class="uniform-img"
-              alt="Artwork D3"
-              onclick="openModal('images/D3.jpeg')"
-            />
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <img
-              src="images/D4.jpeg"
-              class="uniform-img"
-              alt="Artwork D4"
-              onclick="openModal('images/D4.jpeg')"
-            />
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <img
-              src="images/I.jpeg"
-              class="uniform-img"
-              alt="Artwork I"
-              onclick="openModal('images/I.jpeg')"
-            />
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <img
-              src="images/II.jpg"
-              class="uniform-img"
-              alt="Artwork II"
-              onclick="openModal('images/II.jpg')"
-            />
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <img
-              src="images/III.jpeg"
-              class="uniform-img"
-              alt="Artwork III"
-              onclick="openModal('images/III.jpeg')"
-            />
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <img
-              src="images/IV.jpg"
-              class="uniform-img"
-              alt="Artwork IV"
-              onclick="openModal('images/IV.jpg')"
-            />
-          </div>
+    <!-- Main Container -->
+    <div class="main-container d-flex">
+      <!-- About Bar (About Me Section) -->
+      <div class="fixed-left-section" id="aboutBar">
+        <div class="personal-statement">
+          <h2>About Me</h2>
+          <p>
+            Welcome to my photography collection. Each image here tells a story,
+            a moment captured in time. Explore and enjoy my perspective through
+            the lens.
+          </p>
         </div>
       </div>
-    </section>
+
+      <!-- Content (Image Gallery) -->
+      <div class="content" id="content">
+        <!-- Photography Collection Section -->
+        <section id="photography" class="py-5">
+          <div class="container">
+            <div class="row gx-3 gy-3">
+              Images go here
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <img
+                  src="images/A.jpg"
+                  class="uniform-img"
+                  alt="Artwork A"
+                  onclick="openModal('images/A.jpg')"
+                />
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <img
+                  src="images/B.jpg"
+                  class="uniform-img"
+                  alt="Artwork B"
+                  onclick="openModal('images/B.jpg')"
+                />
+              </div>
+
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <img
+                  src="images/C.jpg"
+                  class="uniform-img"
+                  alt="Artwork C"
+                  onclick="openModal('images/C.jpg')"
+                />
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <img
+                  src="images/D.jpg"
+                  class="uniform-img"
+                  alt="Artwork D"
+                  onclick="openModal('images/D.jpg')"
+                />
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <img
+                  src="images/A1.jpg"
+                  class="uniform-img"
+                  alt="Artwork A1"
+                  onclick="openModal('images/A1.jpg')"
+                />
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <img
+                  src="images/A2.jpg"
+                  class="uniform-img"
+                  alt="Artwork A2"
+                  onclick="openModal('images/A2.jpg')"
+                />
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <img
+                  src="images/A3.jpg"
+                  class="uniform-img"
+                  alt="Artwork A3"
+                  onclick="openModal('images/A3.jpg')"
+                />
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <img
+                  src="images/A4.jpg"
+                  class="uniform-img"
+                  alt="Artwork A4"
+                  onclick="openModal('images/A4.jpg')"
+                />
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <img
+                  src="images/B1.jpg"
+                  class="uniform-img"
+                  alt="Artwork B1"
+                  onclick="openModal('images/B1.jpg')"
+                />
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <img
+                  src="images/B2.jpg"
+                  class="uniform-img"
+                  alt="Artwork B2"
+                  onclick="openModal('images/B2.jpg')"
+                />
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <img
+                  src="images/B3.jpg"
+                  class="uniform-img"
+                  alt="Artwork B3"
+                  onclick="openModal('images/B3.jpg')"
+                />
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <img
+                  src="images/B4.jpg"
+                  class="uniform-img"
+                  alt="Artwork B4"
+                  onclick="openModal('images/B4.jpg')"
+                />
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <img
+                  src="images/C1.jpeg"
+                  class="uniform-img"
+                  alt="Artwork C1"
+                  onclick="openModal('images/C1.jpeg')"
+                />
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <img
+                  src="images/C2.jpeg"
+                  class="uniform-img"
+                  alt="Artwork C2"
+                  onclick="openModal('images/C2.jpeg')"
+                />
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <img
+                  src="images/C3.jpeg"
+                  class="uniform-img"
+                  alt="Artwork C3"
+                  onclick="openModal('images/C3.jpeg')"
+                />
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <img
+                  src="images/C4.jpeg"
+                  class="uniform-img"
+                  alt="Artwork C4"
+                  onclick="openModal('images/C4.jpeg')"
+                />
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <img
+                  src="images/D1.jpeg"
+                  class="uniform-img"
+                  alt="Artwork D1"
+                  onclick="openModal('images/D1.jpeg')"
+                />
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <img
+                  src="images/D2.jpeg"
+                  class="uniform-img"
+                  alt="Artwork D2"
+                  onclick="openModal('images/D2.jpeg')"
+                />
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <img
+                  src="images/D3.jpeg"
+                  class="uniform-img"
+                  alt="Artwork D3"
+                  onclick="openModal('images/D3.jpeg')"
+                />
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <img
+                  src="images/D4.jpeg"
+                  class="uniform-img"
+                  alt="Artwork D4"
+                  onclick="openModal('images/D4.jpeg')"
+                />
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <img
+                  src="images/I.jpeg"
+                  class="uniform-img"
+                  alt="Artwork I"
+                  onclick="openModal('images/I.jpeg')"
+                />
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <img
+                  src="images/II.jpg"
+                  class="uniform-img"
+                  alt="Artwork II"
+                  onclick="openModal('images/II.jpg')"
+                />
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <img
+                  src="images/III.jpeg"
+                  class="uniform-img"
+                  alt="Artwork III"
+                  onclick="openModal('images/III.jpeg')"
+                />
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <img
+                  src="images/IV.jpg"
+                  class="uniform-img"
+                  alt="Artwork IV"
+                  onclick="openModal('images/IV.jpg')"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
 
     <!-- Image Modal -->
     <div class="modal" id="imageModal" tabindex="-1" aria-hidden="true">
@@ -286,6 +312,7 @@
       </div>
     </div>
 
+    <!-- Bootstrap JS and Your Custom JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>

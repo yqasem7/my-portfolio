@@ -8,3 +8,16 @@ function openModal(imageSrc) {
   document.getElementById("modalImage").src = imageSrc;
   modal.show();
 }
+
+// Toggle the About Bar
+document
+  .getElementById("aboutBarToggle")
+  .addEventListener("click", function () {
+    const aboutBar = document.getElementById("aboutBar");
+    const mainContainer = document.querySelector(".main-container");
+
+    aboutBar.classList.toggle("active");
+    mainContainer.classList.toggle("shifted");
+  });
+
+// Resume page
