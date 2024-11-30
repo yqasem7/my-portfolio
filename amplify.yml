@@ -1,0 +1,15 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - echo "No build command"
+    build:
+      commands:
+        - echo "No build command"
+  artifacts:
+    baseDirectory: "."
+    files:
+      - "**/*"
+  cache:
+    paths: []
